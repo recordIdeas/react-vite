@@ -1,0 +1,1 @@
+import{j as s,L as r}from"./index-DKAXbOY-.js";function i(){return s.jsxs("ul",{children:[s.jsx("li",{children:s.jsx(r,{to:"/users/1",children:"User 1"})}),s.jsx("li",{children:s.jsx(r,{to:"/users/2",children:"User 2"})}),s.jsx("li",{children:s.jsx(r,{to:"/users/3",children:"User 3"})}),s.jsx("li",{children:s.jsx(r,{to:"/users/4",children:"User 4"})})]})}export{i as default};
