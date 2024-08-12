@@ -2,14 +2,26 @@
 import { lazy, Suspense } from 'react';
 import { useRoutes } from 'react-router';
 
+import ReturnHomeLayout from '../layouts/returnHome';
 import ReturnProjectsLayout from '../layouts/returnProjects';
 import NotFound from '../layouts/notfound';
+
+const Projects = lazy(() => import("../pages/projects"));
 
 const Wuziqi = lazy(() => import("../pages/projects/wuziqi"));
 const Icon = lazy(() => import("../pages/projects/icon"));
 
 export default function ProjectsRoute() {
   return useRoutes([
+    {
+      element: <ReturnHomeLayout />,
+      children: [
+        {
+          path: "",
+          element: <Suspense fallback={null}><Projects /></Suspense>
+        }
+      ]
+    },
     {
       element: <ReturnProjectsLayout />,
       children: [

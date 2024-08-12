@@ -3,7 +3,10 @@ import { lazy, Suspense } from 'react';
 import { useRoutes } from 'react-router';
 
 import ReturnHooksLayout from '../layouts/returnHooks';
+import ReturnHomeLayout from '../layouts/returnHome';
 import NotFound from '../layouts/notfound';
+
+const Hooks = lazy(() => import("../pages/hooks"));
 
 const UserLayoutEffect = lazy(() => import("../pages/hooks/userLayoutEffect"));
 const UseEffect = lazy(() => import("../pages/hooks/useEffect"));
@@ -17,6 +20,15 @@ const UseMemo = lazy(() => import("../pages/hooks/useMemo"));
 
 export default function HooksRoute() {
   return useRoutes([
+    {
+      element: <ReturnHomeLayout />,
+      children: [
+        {
+          path: "",
+          element: <Suspense fallback={null}><Hooks /></Suspense>
+        }
+      ]
+    },
     {
       element: <ReturnHooksLayout />,
       children: [

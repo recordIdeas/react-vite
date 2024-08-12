@@ -1,11 +1,11 @@
-import { useRoutes } from 'react-router';
-import ALLRoutes from './routes/index';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import routes from './routes/index';
 import './App.css';
 
-const App = () => {
-  let routes = useRoutes(ALLRoutes);
-  return (
-    routes
-  );
+export default function App() {
+  const router = createBrowserRouter(routes, {
+    basename: "/react-vite/"
+  });
+
+  return <RouterProvider router={router} />
 }
-export default App;

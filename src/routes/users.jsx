@@ -2,8 +2,11 @@
 import { lazy, Suspense } from 'react';
 import { useRoutes } from 'react-router';
 
+import ReturnHomeLayout from '../layouts/returnHome';
 import ReturnUsersLayout from '../layouts/returnUsers';
 import NotFound from '../layouts/notfound';
+
+const Users = lazy(() => import("../pages/users"));
 
 const NewUser = lazy(() => import("../pages/users/newUser"));
 const UserList = lazy(() => import("../pages/users/userList"));
@@ -11,6 +14,15 @@ const UserDetail = lazy(() => import("../pages/users/userDetail"));
 
 export default function ProjectsRoute() {
   return useRoutes([
+    {
+      element: <ReturnHomeLayout />,
+      children: [
+        {
+          path: "",
+          element: <Suspense fallback={null}><Users /></Suspense>
+        }
+      ]
+    },
     {
       element: <ReturnUsersLayout />,
       children: [

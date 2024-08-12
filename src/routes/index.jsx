@@ -12,10 +12,6 @@ import HooksRoute from './hooks';
 import ProjectsRoute from './projects';
 
 const Home = lazy(() => import("../pages/home"));
-const Users = lazy(() => import("../pages/users"));
-const Abouts = lazy(() => import("../pages/abouts"));
-const Hooks = lazy(() => import("../pages/hooks"));
-const Projects = lazy(() => import("../pages/projects"));
 
 export default [
   {
@@ -29,32 +25,6 @@ export default [
       {
         path: "/home",
         element: <Navigate to="/" />
-      },
-      {
-        path: "/",
-        element: <ReturnHomeLayout />,
-        children: [
-          {
-            path: "/users",
-            element: <Suspense fallback={null}><Users /></Suspense>
-          },
-          {
-            path: "/abouts",
-            element: <Suspense fallback={null}><Abouts /></Suspense>
-          },
-          {
-            path: "/hooks",
-            element: <Suspense fallback={null}><Hooks /></Suspense>
-          },
-          {
-            path: "/projects",
-            element: <Suspense fallback={null}><Projects /></Suspense>
-          },
-          {
-            path: "*",
-            element: <NotFound />
-          }
-        ]
       },
       {
         path: "/users/*",
@@ -71,7 +41,16 @@ export default [
       {
         path: "/projects/*",
         element: <ProjectsRoute />
+      },
+      {
+        element: <ReturnHomeLayout />,
+        children: [
+          {
+            path: "*",
+            element: <NotFound />
+          }
+        ]
       }
     ]
   }
-]
+];
