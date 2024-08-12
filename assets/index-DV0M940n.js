@@ -1,1 +1,0 @@
-import{j as i,L as r}from"./main-DWMysycb.js";function n(){return i.jsx("nav",{children:i.jsxs("ul",{children:[i.jsx("li",{children:i.jsx(r,{to:"/projects/icon",children:"icon"})}),i.jsx("li",{children:i.jsx(r,{to:"/projects/wuziqi",children:"wuziqi"})})]})})}export{n as default};

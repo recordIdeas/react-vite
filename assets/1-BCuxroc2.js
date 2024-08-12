@@ -1,0 +1,1 @@
+import{M as s,j as e,L as i}from"./main--ZZqJAXt.js";function o(){const a=s.mock({image:"@image('140x70', '#50B347', '#FFF', ' LOGO')"});return e.jsx("div",{className:"container",children:e.jsx(i,{to:"/home",children:e.jsx("img",{src:a.image})})})}export{o as default};

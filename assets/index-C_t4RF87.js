@@ -1,1 +1,0 @@
-import{j as t,L as s}from"./main-DWMysycb.js";function o(){return t.jsx("nav",{children:t.jsxs("ul",{children:[t.jsx("li",{children:t.jsx(s,{to:"/abouts/about",children:"about"})}),t.jsx("li",{children:t.jsx(s,{to:"/abouts/contact",children:"contact"})})]})})}export{o as default};
