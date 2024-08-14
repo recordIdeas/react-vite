@@ -4,11 +4,13 @@ import { useRoutes } from 'react-router';
 
 import ReturnHomeLayout from '../layouts/returnHome';
 import ReturnProjectsLayout from '../layouts/returnProjects';
+import ReturnIconLayout from '../layouts/returnIcon';
 import NotFound from '../layouts/notfound';
 
 const Projects = lazy(() => import("../pages/projects"));
 
 const Wuziqi = lazy(() => import("../pages/projects/wuziqi"));
+const IconList = lazy(() => import("../pages/projects/icon/list"));
 const Icon = lazy(() => import("../pages/projects/icon"));
 
 export default function ProjectsRoute() {
@@ -31,11 +33,20 @@ export default function ProjectsRoute() {
         },
         {
           path: "/icon",
-          element: <Suspense fallback={null}><Icon /></Suspense>
+          element: <Suspense fallback={null}><IconList /></Suspense>
         },
         {
           path: "*",
           element: <NotFound />
+        }
+      ]
+    },
+    {
+      element: <ReturnIconLayout />,
+      children: [
+        {
+          path: "/icon/:family",
+          element: <Suspense fallback={null}><Icon /></Suspense>
         }
       ]
     }

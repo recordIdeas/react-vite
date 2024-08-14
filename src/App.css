@@ -25,7 +25,14 @@
   padding: 10px 0;
 }
 
+#root>footer {
+  padding: 10px 0;
+  border-top: 1px solid #cccccc;
+  overflow: hidden;
+}
+
 #root>main {
+  margin: 1em auto;
   flex: 1;
   display: flex;
   place-items: center;
@@ -39,7 +46,7 @@
 }
 
 #root>.breadcrumbs {
-  margin: 1em auto;
+  margin: 1em auto 0;
 }
 
 .breadcrumbs a {
@@ -91,10 +98,6 @@
 
 .read-the-docs {
   color: #888;
-}
-
-ul {
-  text-align: left;
 }
 
 .dark,
