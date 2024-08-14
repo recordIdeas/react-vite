@@ -1,1 +1,0 @@
-import{j as t,L as o}from"./main-C7qvdA_y.js";function n(){return t.jsxs("ul",{children:[t.jsx("li",{children:t.jsx(o,{to:"/abouts/about",children:"about"})}),t.jsx("li",{children:t.jsx(o,{to:"/abouts/contact",children:"contact"})})]})}export{n as default};
