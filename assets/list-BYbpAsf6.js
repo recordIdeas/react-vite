@@ -1,0 +1,1 @@
+import{j as o,L as n}from"./main-Bfw7PSE-.js";function s(){return o.jsxs("ul",{children:[o.jsx("li",{children:o.jsx(n,{to:"/projects/icon/CodazonFont",children:"CodazonFont"})}),o.jsx("li",{children:o.jsx(n,{to:"/projects/icon/FontAwesome",children:"FontAwesome"})}),o.jsx("li",{children:o.jsx(n,{to:"/projects/icon/Linearicons",children:"Linearicons"})})]})}export{s as default};
