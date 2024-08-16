@@ -39,14 +39,13 @@
 
 .font-icon .f-icon-list {
   flex: 1;
+  margin: 0 -20px;
   padding: 10px 5px 0;
-  display: flex;
-  flex-wrap: wrap;
+  align-content: flex-start;
   overflow-y: scroll;
 }
 
 .f-icon-list .f-icon-item {
-  width: 10em;
   padding: 0 5px;
   height: 8em;
   display: flex;
@@ -73,4 +72,45 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
+
+.f-icon-item .f-icon-text {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@media(min-width: 320px) {
+  .f-icon-item .f-icon-text {
+    font-size: 3.2vw;
+  }
+}
+
+@media(min-width: 576px) {
+  .f-icon-item .f-icon-text {
+    font-size: 2.35vw;
+  }
+}
+
+@media(min-width: 768px) {
+  .f-icon-item .f-icon-text {
+    font-size: 1.66vw;
+  }
+}
+
+@media(min-width: 992px) {
+  .f-icon-item .f-icon-text {
+    font-size: 1.35vw;
+  }
+}
+
+@media(min-width: 1200px) {
+  .f-icon-item .f-icon-text {
+    font-size: 1vw;
+  }
+}
+
+@media(min-width: 1600px) {
+  .f-icon-item .f-icon-text {
+    font-size: 16px;
+  }
 }

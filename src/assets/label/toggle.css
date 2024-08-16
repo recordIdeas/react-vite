@@ -1,0 +1,35 @@
+@media(max-width: 767px) {
+  input[name="mobile-toggle"]:not(:checked)+label+* {
+      display: none;
+  }
+  input[name="mobile-toggle"]+label {
+      position: relative;
+      border-bottom: 2px solid;
+      display: block;
+      padding: 0 0 5px;
+  }
+  input[name="mobile-toggle"]+label>* {
+      margin: 0;
+  }
+  input[name="mobile-toggle"]+label:after {
+      content: '>';
+      font-family: cursive;
+      position: absolute;
+      top: 0;
+      bottom: 5px;
+      right: 0;
+      transform: rotate(0deg);
+      width: 1em;
+      height: 1em;
+      margin: auto;
+      text-align: center;
+      line-height: 1em;
+  }
+  input[name="mobile-toggle"]:checked+label {
+      border-bottom: none;
+      margin: 0;
+  }
+  input[name="mobile-toggle"]:checked+label:after {
+      transform: rotate(90deg);
+  }
+}

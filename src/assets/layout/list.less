@@ -1,0 +1,35 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.row {
+    @direction: {
+      xxs: 320;
+      xs: 576;
+      sm: 768;
+      md: 992;
+      lg: 1200
+    }
+    @num: 24;
+
+    .loop(1);
+
+    each(@direction, .(@v, @k) {
+        @media(min-width: unit(@v, px)) {
+          &-@{k} {
+            .loop(1);
+          }
+        }
+      }
+
+    );
+
+    .loop(@index) when(@index<=@num) {
+      &-@{index} .col {
+        width: unit((100/@index), %);
+      }
+
+      .loop(@index+1);
+    }
+  }
+}

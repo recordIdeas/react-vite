@@ -78,20 +78,3 @@ button:focus-visible {
 ul {
   padding: 0 0 0 1.35em;
 }
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -10px;
-}
-
-.row [class*=col-] {
-  width: 100%;
-  padding: 10px;
-}
-
-@media(min-width: 768px) {
-  .row .col-sm-8 {
-    width: 25%;
-  }
-}

@@ -1,8 +1,9 @@
 import { useState, useCallback, memo } from 'react';
 import { useParams } from "react-router-dom";
 import { getFontIcons } from '../../../utils/font/getFontIcons';
-import './css/icon.css';
-import './css/popups.css';
+import { matchClosestValue } from '../../../utils/array/matchClosestValue';
+import '../../../assets/label/popups.css';
+import './style.css';
 
 export default function Icon() {
   const [currentFont, setCurrentFont] = useState("");
@@ -17,7 +18,7 @@ export default function Icon() {
     if (fontIcons) {
       setCurrentFont(params.family);
       setCurrentIcons(fontIcons);
-      setSelectedIcon(matchValueInArray(fontIcons, 'search'));
+      setSelectedIcon(matchClosestValue(fontIcons, 'search'));
     } else {
       if (!currentFont) importFontCss(params.family);
 
@@ -61,9 +62,9 @@ const FontIconList = memo(function FontIconList({ fontFamily, fontIcons, query, 
   );
 
   return (
-    <div className="f-icon-list">
+    <div className="f-icon-list row row-2 row-xxs-4 row-xs-5 row-sm-6 row-md-8 row-lg-12">
       {visibleIcons.map((icon, i) =>
-        <div className="f-icon-item" key={i}>
+        <div className="f-icon-item col" key={i}>
           <label htmlFor="popups-1" onClick={() => { handleClick(icon) }}></label>
           <span className={"f-icon-family " + icon.classname} style={{ fontFamily }}></span>
           <span className="f-icon-text">{icon.text}</span>
@@ -75,20 +76,4 @@ const FontIconList = memo(function FontIconList({ fontFamily, fontIcons, query, 
 
 function importFontCss(fontFamily) {
   return import(`./fonts/${fontFamily}/${fontFamily}.css`);
-}
-
-function matchValueInArray(arr, query) {
-  return arr.reduce((prevIcon, icon) => {
-    if (prevIcon.text == query) {
-      return prevIcon;
-    } else if (icon.text == query) {
-      return icon;
-    } else if (prevIcon.text.indexOf(query) != -1) {
-      return prevIcon;
-    } else if (icon.text.indexOf(query) != -1) {
-      return icon;
-    } else {
-      return prevIcon;
-    }
-  }, arr[0]);
 }
