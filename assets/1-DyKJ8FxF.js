@@ -1,1 +1,0 @@
-import{j as e,L as s}from"./main-DhGy7tgL.js";const t="/react-vite/assets/react-CHdo91hT.svg";function a(){return e.jsx("div",{className:"container",children:e.jsx(s,{to:"/home",children:e.jsx("img",{src:t})})})}export{a as default};
