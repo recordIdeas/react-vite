@@ -1,0 +1,1 @@
+import{j as e,L as x}from"./main-BVZp6yZR.js";function d(){return e.jsxs("ul",{children:[e.jsx("li",{children:e.jsx(x,{to:"/redux/sliceRedux",children:"createSlice in Redux"})}),e.jsx("li",{children:e.jsx(x,{to:"/redux/axiosRedux",children:"Axios and Redux"})})]})}export{d as default};
