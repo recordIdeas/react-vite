@@ -1,0 +1,1 @@
+import{r as a,j as o}from"./main-DVjHUGcc.js";const c=(t="")=>{const[s,e]=a.useState(t);return[s,n=>{const{value:r}=n.target;e(r)},()=>{e(t)}]},m=({type:t,value:s,onChange:e})=>o.jsx("input",{type:"text",id:t,name:t,className:"input input-bordered w-full max-w-xs",required:!0,value:s,onChange:e});export{m as T,c as u};
