@@ -1,0 +1,1 @@
+import{j as i,L as r}from"./main-CRS8ZZgV.js";function e(){return i.jsxs("ul",{children:[i.jsx("li",{children:i.jsx(r,{to:"/projects/icon",children:"icon"})}),i.jsx("li",{children:i.jsx(r,{to:"/projects/wuziqi",children:"wuziqi"})})]})}export{e as default};
