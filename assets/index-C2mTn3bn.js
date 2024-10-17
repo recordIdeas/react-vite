@@ -1,1 +1,0 @@
-import{r,j as e}from"./main-DVjHUGcc.js";function a(){const[s,o]=r.useState("");return fetch("/api/users").then(t=>t.json()).then(t=>o(t)).catch(t=>console.error("Erro ao obter os dados:",t)),e.jsxs(e.Fragment,{children:[e.jsx("h2",{children:"Welcome to the about page"}),e.jsxs("div",{children:["Teste asdf asdf ",JSON.stringify(s)," "]})]})}export{a as default};

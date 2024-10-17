@@ -1,1 +1,0 @@
-import{d as i,e as r,j as e,i as d,f as a}from"./main-DVjHUGcc.js";function l(){const s=i(o=>o.sliceReducer.count),n=r(),t=()=>{n(d())},c=()=>{n(a())};return e.jsxs(e.Fragment,{children:[e.jsx("button",{onClick:c,children:"-"}),e.jsx("span",{children:s}),e.jsx("button",{onClick:t,children:"+"})]})}export{l as default};
