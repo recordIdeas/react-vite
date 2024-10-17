@@ -1,0 +1,1 @@
+import{i as o,k as i,l as r,j as n,m as a,n as d}from"./main-BVxVwXXK.js";function u(){const s=o(i),t=r(),e=()=>{t(a())},c=()=>{t(d())};return n.jsxs(n.Fragment,{children:[n.jsx("button",{onClick:c,children:"-"}),n.jsx("span",{children:s}),n.jsx("button",{onClick:e,children:"+"})]})}export{u as default};
