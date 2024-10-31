@@ -1,1 +1,0 @@
-import{r,j as e}from"./main-BElwAg2d.js";function a(){const[s,o]=r.useState("");return r.useEffect(()=>{fetch("/api/users").then(t=>t.json()).then(t=>o(t)).catch(t=>console.error("Erro ao obter os dados:",t))},[]),e.jsx(e.Fragment,{children:e.jsxs("pre",{children:[JSON.stringify(s,null,2)," "]})})}export{a as default};

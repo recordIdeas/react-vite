@@ -1,0 +1,1 @@
+import{j as s,L as i}from"./main-Dxe9uIen.js";function e(){return s.jsxs("ul",{children:[s.jsx("li",{children:s.jsx(i,{to:"/projects/users",children:"users"})}),s.jsx("li",{children:s.jsx(i,{to:"/projects/icon",children:"icon"})}),s.jsx("li",{children:s.jsx(i,{to:"/projects/wuziqi",children:"wuziqi"})})]})}export{e as default};
